@@ -266,7 +266,7 @@ static const QPointingDevice *pointingDeviceFor(qint64 deviceID)
 
     m_mouseMoveHelper = [[QNSViewMouseMoveHelper alloc] initWithView:self];
 
-    NSUInteger trackingOptions = NSTrackingActiveInActiveApp
+    NSUInteger trackingOptions = NSTrackingActiveAlways
         | NSTrackingMouseEnteredAndExited | NSTrackingCursorUpdate;
 
     // Ideally, NSTrackingMouseMoved should be turned on only if QWidget::mouseTracking
